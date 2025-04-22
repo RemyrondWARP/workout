@@ -1,9 +1,6 @@
 
+import dynamic from 'next/dynamic';
+const App = dynamic(() => import('../src/App'), { ssr: false });
 export default function Home() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h1>Workout App (placeholder)</h1>
-      <p>Deze versie toont nog geen functionaliteit, maar is klaar voor installatie als PWA.</p>
-    </div>
-  );
+  return <App />;
 }
